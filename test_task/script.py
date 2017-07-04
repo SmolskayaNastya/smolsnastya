@@ -12,7 +12,6 @@ for i in range(len(links)):
     #Парсим страницу с помощью BeautifulSoup
     soup = BeautifulSoup(page, 'html.parser')
     
-    #Получаем со страницы все теги с классом small
     urls_tag = soup.findAll(attrs={"rel":"nofollow"})
     
     urls.append(urls_tag[0]["href"])
